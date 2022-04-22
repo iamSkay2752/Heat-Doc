@@ -163,7 +163,7 @@ article {
 
 /* header */
 article header {
-	color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0); /* Test Three */ 
 	background-color: rgb(46, 47, 48);
 	padding: 8px;
 }
