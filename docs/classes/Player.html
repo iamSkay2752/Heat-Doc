@@ -5,11 +5,11 @@
 
 <html>
 	<head>
-		<title>Player - impulse documentation</title>
+		<title>Player - Heat Documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Player - impulse documentation" />
-		<meta property="og:site_name" content="impulse documentation" />
+		<meta property="og:title" content="Player - Heat Documentatio" />
+		<meta property="og:site_name" content="Heat Documentatio" />
 
 			<meta property="og:description" content="A physical player in the server" />
 
@@ -20,40 +20,23 @@
 
 	<body>
 		<aside>
-			<h1>impulse docs</h1>
+			<h1>Heat Docs</h1>
 
 			<!-- project contents -->
 			<section>
 						<h2>Classes</h2>
 
 						<ul>
-								<li><a href="../classes/Entity.html">Entity</a></li>
 								<li><a href="../classes/Player.html">Player</a></li>
 						</ul>
 						<h2>Modules</h2>
 
 						<ul>
-								<li><a href="../modules/Achievement.html">Achievement</a></li>
 								<li><a href="../modules/Anim.html">Anim</a></li>
-								<li><a href="../modules/Business.html">Business</a></li>
-								<li><a href="../modules/Group.html">Group</a></li>
-								<li><a href="../modules/Hunger.html">Hunger</a></li>
-								<li><a href="../modules/Inventory.html">Inventory</a></li>
-								<li><a href="../modules/MenuMessage.html">MenuMessage</a></li>
 								<li><a href="../modules/Misc.html">Misc</a></li>
-								<li><a href="../modules/Schema.html">Schema</a></li>
 								<li><a href="../modules/Setting.html">Setting</a></li>
-								<li><a href="../modules/Sync.html">Sync</a></li>
 						</ul>
-						<h2>Topics</h2>
-
-						<ul>
-								<li><a href="../topics/00-installing.md.html">Installing impulse on a server</a></li>
-								<li><a href="../topics/10-devsetup.md.html">Installing impulse locally (for development)</a></li>
-								<li><a href="../topics/20-makingschema.md.html">Making a schema</a></li>
-								<li><a href="../topics/30-item.md.html">Making an item</a></li>
-								<li><a href="../topics/40-plugin.md.html">Making a plugin</a></li>
-						</ul>
+						
 						<h2>Hooks</h2>
 
 						<ul>
@@ -81,14 +64,9 @@
 					<div class="contents">
 							<h2>Functions</h2>
 							<ul>
-									<li><span class="realm shared"></span><a href="#meta:CanArrest">Player:CanArrest(target)</a></li>
-									<li><span class="realm shared"></span><a href="#meta:InSpawn">Player:InSpawn()</a></li>
-									<li><span class="realm shared"></span><a href="#meta:IsArrested">Player:IsArrested()</a></li>
-									<li><span class="realm shared"></span><a href="#meta:IsCharacterFemale">Player:IsCharacterFemale()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:IsDeveloper">Player:IsDeveloper()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:IsDonator">Player:IsDonator()</a></li>
 									<li><span class="realm shared"></span><a href="#meta:Notify">Player:Notify(message)</a></li>
-									<li><span class="realm shared"></span><a href="#meta:SetHandsBehindBack">Player:SetHandsBehindBack(state)</a></li>
 							</ul>
 					</div>
 				</details>
@@ -96,114 +74,6 @@
 				<!-- methods -->
 					<h1 class="title">Functions</h1>
 
-						<section class="method">
-							<header>
-								<a class="anchor" id="meta:CanArrest">
-									<h1><span class="realm shared"></span>Player:CanArrest(target)</h1>
-								</a>
-
-
-									<a class="reference" href="https://github.com/vingard/impulse/tree/masterc:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\gamemodes\impulse\gamemode\core\sh_arrest.lua#L46">View source &raquo;</a>
-
-								<p>Returns if a player can arrest the target</p>
-							</header>
-
-
-									<h3>Parameters</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">target</span>
-
-													<span class="tag"><span class="type">entity</span></span>
-
-
-												<p> The target who would be arrested</p>
-											</li>
-									</ul>
-
-
-						</section>
-						<section class="method">
-							<header>
-								<a class="anchor" id="meta:InSpawn">
-									<h1><span class="realm shared"></span>Player:InSpawn()</h1>
-								</a>
-
-
-									<a class="reference" href="https://github.com/vingard/impulse/tree/masterc:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\gamemodes\impulse\gamemode\core\sh_main.lua#L86">View source &raquo;</a>
-
-								<p>Returns if a player is in the spawn zone</p>
-							</header>
-
-
-
-								<h3>Returns</h3>
-								<ul>
-
-											<li>
-													<span class="type">bool</span>
-
-												<p>Is in spawn</p>
-											</li>
-
-								</ul>
-
-						</section>
-						<section class="method">
-							<header>
-								<a class="anchor" id="meta:IsArrested">
-									<h1><span class="realm shared"></span>Player:IsArrested()</h1>
-								</a>
-
-
-									<a class="reference" href="https://github.com/vingard/impulse/tree/masterc:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\gamemodes\impulse\gamemode\core\sh_arrest.lua#L61">View source &raquo;</a>
-
-								<p>Returns if a player is arrested</p>
-							</header>
-
-
-
-								<h3>Returns</h3>
-								<ul>
-
-											<li>
-													<span class="tag type">any</span>
-
-												<p>bool Is arrested</p>
-											</li>
-
-								</ul>
-
-						</section>
-						<section class="method">
-							<header>
-								<a class="anchor" id="meta:IsCharacterFemale">
-									<h1><span class="realm shared"></span>Player:IsCharacterFemale()</h1>
-								</a>
-
-
-									<a class="reference" href="https://github.com/vingard/impulse/tree/masterc:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\gamemodes\impulse\gamemode\core\sh_main.lua#L170">View source &raquo;</a>
-
-								<p>Returns if the player has a female character</p>
-							</header>
-
-
-
-								<h3>Returns</h3>
-								<ul>
-
-											<li>
-													<span class="type">bool</span>
-
-												<p>Is female</p>
-											</li>
-
-								</ul>
-
-						</section>
 						<section class="method">
 							<header>
 								<a class="anchor" id="meta:IsDeveloper">
@@ -281,38 +151,6 @@
 
 
 												<p> The notification message</p>
-											</li>
-									</ul>
-
-
-						</section>
-						<section class="method">
-							<header>
-								<a class="anchor" id="meta:SetHandsBehindBack">
-									<h1><span class="realm shared"></span>Player:SetHandsBehindBack(state)</h1>
-								</a>
-
-
-									<a class="reference" href="https://github.com/vingard/impulse/tree/masterc:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\gamemodes\impulse\gamemode\core\sh_arrest.lua#L7">View source &raquo;</a>
-
-								<p>Sets if players hands are behind their back, this can be called on the server but always be called on the client to avoid lag</p>
-							</header>
-
-
-									<h3>Parameters</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">state</span>
-
-													<span class="tag"><span class="type">boolean</span></span>
-
-
-												<p>
-
-</p>
 											</li>
 									</ul>
 
