@@ -5,11 +5,11 @@
 
 <html>
 	<head>
-		<title>Anim - impulse documentation</title>
+		<title>Anim - Heat documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Anim - impulse documentation" />
-		<meta property="og:site_name" content="impulse documentation" />
+		<meta property="og:title" content="Anim - Heat documentation" />
+		<meta property="og:site_name" content="Heat documentation" />
 
 			<meta property="og:description" content="Functions to control a player's animations, based heavily on nutscript's Anim system" />
 
@@ -20,40 +20,23 @@
 
 	<body>
 		<aside>
-			<h1>impulse docs</h1>
+			<h1>Heat docs</h1>
 
 			<!-- project contents -->
 			<section>
 						<h2>Modules</h2>
 
 						<ul>
-								<li><a href="../modules/Achievement.html">Achievement</a></li>
 								<li><a href="../modules/Anim.html">Anim</a></li>
-								<li><a href="../modules/Business.html">Business</a></li>
-								<li><a href="../modules/Group.html">Group</a></li>
-								<li><a href="../modules/Hunger.html">Hunger</a></li>
-								<li><a href="../modules/Inventory.html">Inventory</a></li>
-								<li><a href="../modules/MenuMessage.html">MenuMessage</a></li>
 								<li><a href="../modules/Misc.html">Misc</a></li>
-								<li><a href="../modules/Schema.html">Schema</a></li>
 								<li><a href="../modules/Setting.html">Setting</a></li>
-								<li><a href="../modules/Sync.html">Sync</a></li>
 						</ul>
 						<h2>Classes</h2>
 
 						<ul>
 								<li><a href="../classes/Player.html">Player</a></li>
-								<li><a href="../classes/Entity.html">Entity</a></li>
 						</ul>
-						<h2>Topics</h2>
-
-						<ul>
-								<li><a href="../topics/00-installing.md.html">Installing impulse on a server</a></li>
-								<li><a href="../topics/10-devsetup.md.html">Installing impulse locally (for development)</a></li>
-								<li><a href="../topics/20-makingschema.md.html">Making a schema</a></li>
-								<li><a href="../topics/30-item.md.html">Making an item</a></li>
-								<li><a href="../topics/40-plugin.md.html">Making a plugin</a></li>
-						</ul>
+						
 						<h2>Hooks</h2>
 
 						<ul>
@@ -81,9 +64,9 @@
 					<div class="contents">
 							<h2>Functions</h2>
 							<ul>
-									<li><span class="realm shared"></span><a href="#impulse.Anim.GetModelClass">impulse.Anim.GetModelClass(model)</a></li>
-									<li><span class="realm shared"></span><a href="#impulse.Anim.SetModelClass">impulse.Anim.SetModelClass(model, class)</a></li>
-									<li><span class="realm server"></span><a href="#meta:ForceSequence">meta:ForceSequence(sequence[, callback[, time[, noFreeze=false]]])</a></li>
+									<li><span class="realm shared"></span><a href="#heat.anim.GetModelClass">heat.anim.GetModelClass(model)</a></li>
+									<li><span class="realm shared"></span><a href="#heat.anim.SetModelClass">heat.anim.SetModelClass(model, class)</a></li>
+									<li><span class="realm server"></span><a href="#playerMeta:ForceSequence">playerMeta:ForceSequence(sequence[, callback[, time[, noFreeze=false]]])</a></li>
 							</ul>
 							<h2>Tables</h2>
 							<ul>
@@ -97,8 +80,8 @@
 
 						<section class="method">
 							<header>
-								<a class="anchor" id="impulse.Anim.GetModelClass">
-									<h1><span class="realm shared"></span>impulse.Anim.GetModelClass(model)</h1>
+								<a class="anchor" id="heat.anim.GetModelClass">
+									<h1><span class="realm shared"></span>heat.anim.GetModelClass(model)</h1>
 								</a>
 
 
@@ -138,8 +121,8 @@
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="impulse.Anim.SetModelClass">
-									<h1><span class="realm shared"></span>impulse.Anim.SetModelClass(model, class)</h1>
+								<a class="anchor" id="heat.anim.SetModelClass">
+									<h1><span class="realm shared"></span>heat.anim.SetModelClass(model, class)</h1>
 								</a>
 
 
@@ -184,8 +167,8 @@
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="meta:ForceSequence">
-									<h1><span class="realm server"></span>meta:ForceSequence(sequence[, callback[, time[, noFreeze=false]]])</h1>
+								<a class="anchor" id="playerMeta:ForceSequence">
+									<h1><span class="realm server"></span>playerMeta:ForceSequence(sequence[, callback[, time[, noFreeze=false]]])</h1>
 								</a>
 
 
