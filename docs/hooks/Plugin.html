@@ -1,0 +1,320 @@
+
+
+
+
+
+<html>
+	<head>
+		<title>Plugin - impulse documentation</title>
+
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Plugin - impulse documentation" />
+		<meta property="og:site_name" content="impulse documentation" />
+
+			<meta property="og:description" content="Hooks that can be used in a Plugin or a Schema" />
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
+		<link rel="stylesheet" href="../ldoc.css" />
+		<link rel="stylesheet" href="../highlight.css" />
+	</head>
+
+	<body>
+		<aside>
+			<h1>impulse docs</h1>
+
+			<!-- project contents -->
+			<section>
+						<h2>Hooks</h2>
+
+						<ul>
+								<li><a href="../hooks/Plugin.html">Plugin</a></li>
+						</ul>
+						<h2>Modules</h2>
+
+						<ul>
+								<li><a href="../modules/Achievement.html">Achievement</a></li>
+								<li><a href="../modules/Anim.html">Anim</a></li>
+								<li><a href="../modules/Group.html">Group</a></li>
+								<li><a href="../modules/Hunger.html">Hunger</a></li>
+								<li><a href="../modules/Inventory.html">Inventory</a></li>
+								<li><a href="../modules/MenuMessage.html">MenuMessage</a></li>
+								<li><a href="../modules/Misc.html">Misc</a></li>
+								<li><a href="../modules/Setting.html">Setting</a></li>
+								<li><a href="../modules/Sync.html">Sync</a></li>
+						</ul>
+						<h2>Classes</h2>
+
+						<ul>
+								<li><a href="../classes/Entity.html">Entity</a></li>
+						</ul>
+						<h2>Topics</h2>
+
+						<ul>
+								<li><a href="../topics/00-installing.md.html">Installing impulse</a></li>
+								<li><a href="../topics/10-devsetup.md.html">Setting up a developer build</a></li>
+								<li><a href="../topics/20-makingschema.md.html">Making a schema</a></li>
+								<li><a href="../topics/30-item.md.html">Making an item</a></li>
+								<li><a href="../topics/40-plugin.md.html">Making a plugin</a></li>
+						</ul>
+			</section>
+		</aside>
+
+		<!-- library functions -->
+		<article>
+				<header class="module">
+					<h1>Plugin</h1>
+					<h2>Hooks that can be used in a Plugin or a Schema</h2>
+				</header>
+
+				<!-- description -->
+				<p>
+
+</p>
+
+				<!-- summary -->
+				<details open>
+					<summary>Reference</summary>
+
+					<div class="contents">
+							<h2>Functions</h2>
+							<ul>
+									<li><span class="realm shared"></span><a href="#CanUseInventory">PLUGIN:CanUseInventory(ply)</a></li>
+									<li><span class="realm client"></span><a href="#DefineSettings">PLUGIN:DefineSettings()</a></li>
+									<li><span class="realm client"></span><a href="#GetDeathSound">PLUGIN:GetDeathSound()</a></li>
+									<li><span class="realm server"></span><a href="#PlayerArrested">PLUGIN:PlayerArrested(convict, officer)</a></li>
+									<li><span class="realm server"></span><a href="#PlayerOpenStorage">PLUGIN:PlayerOpenStorage(ply, box)</a></li>
+									<li><span class="realm server"></span><a href="#PlayerUnArrested">PLUGIN:PlayerUnArrested(convict, officer)</a></li>
+							</ul>
+					</div>
+				</details>
+
+				<!-- methods -->
+					<h1 class="title">Functions</h1>
+
+						<section class="method">
+							<header>
+								<a class="anchor" id="CanUseInventory">
+									<h1><span class="realm shared"></span>PLUGIN:CanUseInventory(ply)</h1>
+								</a>
+
+
+
+								<p>Controls wether a player can use their inventory, returning false stops all inventory interaction and stops the inventory from displaying</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">ply</span>
+
+													<span class="tag"><span class="type">entity</span></span>
+
+
+												<p> The player that is trying to use their inventory</p>
+											</li>
+									</ul>
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<span class="type">bool</span>
+
+												<p>Can use inventory</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="DefineSettings">
+									<h1><span class="realm client"></span>PLUGIN:DefineSettings()</h1>
+								</a>
+
+
+
+								<p>Called when you can define settings, all settings you want to define should be done inside this hook</p>
+							</header>
+
+
+
+								<h3>See Also</h3>
+								<ul>
+										<li><a href="../modules/Setting.html#">Setting</a></li>
+								</ul>
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="GetDeathSound">
+									<h1><span class="realm client"></span>PLUGIN:GetDeathSound()</h1>
+								</a>
+
+
+
+								<p>Returns a custom death sound to override the default impulse one</p>
+							</header>
+
+
+
+								<h3>Returns</h3>
+								<ul>
+
+											<li>
+													<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
+												<p>Sound path</p>
+											</li>
+
+								</ul>
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="PlayerArrested">
+									<h1><span class="realm server"></span>PLUGIN:PlayerArrested(convict, officer)</h1>
+								</a>
+
+
+
+								<p>Called when a player is arrested</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">convict</span>
+
+													<span class="tag"><span class="type">entity</span></span>
+
+
+												<p> The player that has been arrested</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">officer</span>
+
+													<span class="tag"><span class="type">entity</span></span>
+
+
+												<p> The officer who arrested the player</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="PlayerOpenStorage">
+									<h1><span class="realm server"></span>PLUGIN:PlayerOpenStorage(ply, box)</h1>
+								</a>
+
+
+
+								<p>Called when a player opens their storage box</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">ply</span>
+
+													<span class="tag"><span class="type">entity</span></span>
+
+
+												<p> The player that has opened their storage</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">box</span>
+
+													<span class="tag"><span class="type">entity</span></span>
+
+
+												<p> The storage box</p>
+											</li>
+									</ul>
+
+
+						</section>
+						<section class="method">
+							<header>
+								<a class="anchor" id="PlayerUnArrested">
+									<h1><span class="realm server"></span>PLUGIN:PlayerUnArrested(convict, officer)</h1>
+								</a>
+
+
+
+								<p>Called when a player is un-arrested</p>
+							</header>
+
+
+									<h3>Parameters</h3>
+
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">convict</span>
+
+													<span class="tag"><span class="type">entity</span></span>
+
+
+												<p> The player that has been un-arrested</p>
+											</li>
+									</ul>
+
+									<ul>
+
+											<li>
+												<span class="tag parameter">officer</span>
+
+													<span class="tag"><span class="type">entity</span></span>
+
+
+												<p> The officer who un-arrested the player</p>
+											</li>
+									</ul>
+
+
+						</section>
+		</article>
+
+		<footer>
+			<p>Generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></p>
+		</footer>
+
+		<script type="text/javascript" src="../highlight.min.js"></script>
+		<script type="text/javascript">
+		var elements = document.querySelectorAll("aside code, pre code")
+
+		hljs.configure({
+			languages: ["lua"]
+		});
+
+		for (var i = 0; i < elements.length; i++)
+		{
+			hljs.highlightBlock(elements[i]);
+		}
+		</script>
+	</body>
+</html>
