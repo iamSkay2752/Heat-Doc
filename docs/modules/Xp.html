@@ -8,10 +8,10 @@
 		<title>Anim - Heat Documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Anim - Heat Documentation" />
+		<meta property="og:title" content="XP - Heat Documentation" />
 		<meta property="og:site_name" content="Heat Documentation" />
 
-			<meta property="og:description" content="Functions to control a player's animations, based heavily on nutscript's Anim system" />
+			<meta property="og:description" content="Functions to control a player's XP amount." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../ldoc.css" />
@@ -30,7 +30,7 @@
 								<li><a href="../modules/Anim.html">Anim</a></li>
 								<li><a href="../modules/Misc.html">Misc</a></li>
 								<li><a href="../modules/Setting.html">Setting</a></li>
-								<li><a href="../modules/Xp.html">XP</a></li>
+                        <li><a href="../modules/Xp.html">XP</a></li>
 						</ul>
 						<h2>Classes</h2>
 
@@ -45,7 +45,7 @@
 		<article>
 				<header class="module">
 					<h1>Anim</h1>
-					<h2>Functions to control a player's animations, based heavily on nutscript's Anim system</h2>
+					<h2>Functions to control a player's XP Amount</h2>
 				</header>
 
 				<!-- description -->
@@ -60,13 +60,9 @@
 					<div class="contents">
 							<h2>Functions</h2>
 							<ul>
-									<li><span class="realm shared"></span><a href="#heat.anim.GetModelClass">heat.anim.GetModelClass(model)</a></li>
-									<li><span class="realm shared"></span><a href="#heat.anim.SetModelClass">heat.anim.SetModelClass(model, class)</a></li>
-									<li><span class="realm server"></span><a href="#meta:ForceSequence">meta:ForceSequence(sequence[, callback[, time[, noFreeze=false]]])</a></li>
-							</ul>
-							<h2>Tables</h2>
-							<ul>
-									<li><span class="realm shared"></span><a href="#DefaultAnimClasses">DefaultAnimClasses</a></li>
+									<li><span class="realm shared"></span><a href="#playerMeta:GetXP">playerMeta:GetXP()</a></li>
+									<li><span class="realm shared"></span><a href="#playerMeta:SetXP">playerMeta:SetXP(amount)</a></li>
+									<li><span class="realm server"></span><a href="#playerMeta:AddXP">playerMeta:AddXP(amount)</a></li>
 							</ul>
 					</div>
 				</details>
@@ -76,32 +72,15 @@
 
 						<section class="method">
 							<header>
-								<a class="anchor" id="heat.anim.GetModelClass">
-									<h1><span class="realm shared"></span>heat.anim.GetModelClass(model)</h1>
+								<a class="anchor" id="playerMeta:GetXP">
+									<h1><span class="realm shared"></span>playerMeta:GetXP()</h1>
 								</a>
 
 
 									<a class="reference" href="https://github.com/vingard/impulse/tree/masterc:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\gamemodes\impulse\gamemode\core\sh_anims.lua#L377">View source &raquo;</a>
 
-								<p>Gets the animation class of a specific model</p>
+								<p>Returns the XP of the player or ( self )</p>
 							</header>
-
-
-									<h3>Parameters</h3>
-
-
-									<ul>
-
-											<li>
-												<span class="tag parameter">model</span>
-
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-
-												<p> The model</p>
-											</li>
-									</ul>
-
 
 								<h3>Returns</h3>
 								<ul>
@@ -109,7 +88,7 @@
 											<li>
 													<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
 
-												<p>Animation class</p>
+												<p>Number</p>
 											</li>
 
 								</ul>
@@ -117,14 +96,14 @@
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="heat.anim.SetModelClass">
-									<h1><span class="realm shared"></span>heat.anim.SetModelClass(model, class)</h1>
+								<a class="anchor" id="playerMeta:SetXP">
+									<h1><span class="realm shared"></span>playerMeta:SetXP(amount)</h1>
 								</a>
 
 
 									<a class="reference" href="https://github.com/vingard/impulse/tree/masterc:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\gamemodes\impulse\gamemode\core\sh_anims.lua#L361">View source &raquo;</a>
 
-								<p>Sets the animation class of a specific model</p>
+								<p>Sets the XP of the player</p>
 							</header>
 
 
@@ -134,12 +113,12 @@
 									<ul>
 
 											<li>
-												<span class="tag parameter">model</span>
+												<span class="tag parameter">value</span>
 
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">value</a></span>
 
 
-												<p> The model to set</p>
+												<p> The amount of xp to set</p>
 											</li>
 									</ul>
 
@@ -148,10 +127,10 @@
 											<li>
 												<span class="tag parameter">class</span>
 
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">value</a></span>
 
 
-												<p> The animation class</p>
+												<p> XP amount</p>
 											</li>
 									</ul>
 
@@ -163,14 +142,14 @@
 						</section>
 						<section class="method">
 							<header>
-								<a class="anchor" id="meta:ForceSequence">
-									<h1><span class="realm server"></span>meta:ForceSequence(sequence[, callback[, time[, noFreeze=false]]])</h1>
+								<a class="anchor" id="playerMeta:AddXP">
+									<h1><span class="realm server"></span>playerMeta:AddXP(value)</h1>
 								</a>
 
 
 									<a class="reference" href="https://github.com/vingard/impulse/tree/masterc:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\gamemodes\impulse\gamemode\core\sh_anims.lua#L418">View source &raquo;</a>
 
-								<p>Plays an animation sequence on a player</p>
+								<p>Adds extra amount of xp to the current amount</p>
 							</header>
 
 
@@ -180,12 +159,12 @@
 									<ul>
 
 											<li>
-												<span class="tag parameter">sequence</span>
+												<span class="tag parameter">value</span>
 
-													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+													<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">value</a></span>
 
 
-												<p> The sequence name</p>
+												<p> number</p>
 											</li>
 									</ul>
 
