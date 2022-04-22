@@ -194,8 +194,8 @@ article details {
 }
 
 article details summary {
-	background-color: rgb(90, 200, 250);
-	color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0); /* Test Four */
+	color: rgb(0, 0, 0); /* Test Four */
 	padding: 8px;
 }
 
