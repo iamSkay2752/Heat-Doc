@@ -94,7 +94,7 @@ body {
 
 	height: 100vh;
 	font-family: Arial, sans-serif;
-	background-color: rgb(0, 0, 0); /* Test Six */
+	background-color: rgb(45, 44, 44); /* Test Six */
 }
 
 header {
@@ -127,7 +127,7 @@ aside section > :not(ul) {
 }
 
 aside section h2 {
-	color: rgb(90, 86, 86);
+	color: rgb(23, 23, 23);
 	margin: 8px 0 8px 0;
 
 	font-size: 18px;
